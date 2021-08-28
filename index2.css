@@ -1,0 +1,249 @@
+h1 {
+    
+    margin: 80px auto;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    max-width: 800px;
+    position: relative;
+    font-weight: bold;
+  }
+  h1:before {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    background: lightgray;
+    left: 85px;
+    top: 50%;
+    position: absolute;
+  }
+  h1:after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    background: lightgray;
+    right: 85px;
+    top: 50%;
+    position: absolute;
+  }
+  body{
+    font-family: sans-serif;
+  }
+
+  .hidden1{
+    visibility: hidden;
+
+  }
+  .hidden2{
+    background-color: red;
+  }
+  .middle{
+    display: inline-block;
+    border: 2px orangered solid;
+    
+    margin-top: 5%;
+    margin-left: 40%;
+    border-radius: 15px;
+    
+    width: 20%;
+    padding-left: 0px;
+    box-shadow: 10px 10px 10px lightgrey;
+    text-align: center;
+  }
+
+  .modal{
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin-left: 40%;
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    z-index: 10;
+    opacity: 0;
+}
+
+.modal_content{
+  border: 2px solid orangered;
+  color: orangered;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 10px 10px 10px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 15px;
+  background-color: white;
+  width: 20%;
+  height: 10%;
+  opacity: 0;
+  visibility: hidden;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+  
+}
+
+.input1{
+  display: block;
+  margin-left: 24%;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 10px 10px 10px lightgrey;
+
+}
+
+.modal:target{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal:target .modal_content{
+  visibility: visible;
+  opacity: 1;
+}
+
+.button1{
+  color: white;
+  background-color: orangered;
+  border: none;
+  width: 80px;
+  height: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+button:hover{
+  color: black;
+  background-color: white;
+  border: 1px solid orangered;
+}
+
+.close{
+  position: absolute;
+  right: 5px;
+  top: 0;
+  font-size: 30px;
+
+}
+
+a{
+  color: grey;
+  text-decoration: none;
+}
+
+a:visited{
+  color: grey;
+}
+.close:hover{
+  color: black;
+}
+a:hover{
+  color: black;
+}
+
+@media all and (min-width:750px) and (max-width:1028px) {
+  .middle{
+    width: 40%;
+    margin-left: 30%;
+  }
+
+  .change{
+    font-size: 20px;
+  }
+
+  h1::before{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  h1::after{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .back{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .media{
+    position: absolute;
+    top: 85px;
+    left: 220px;
+  }
+  
+  .modal_content{
+    width: 40%;
+  }
+
+  .label1{
+    font-size: 25px;
+}
+
+.button1{
+    font-size: 20px;
+}
+}
+
+
+@media all and (min-width:300px) and (max-width:720px) {
+  .middle{
+    position: absolute;
+    top: 150px;
+    left: 8px;
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .change{
+    font-size: 20px;
+  }
+
+  h1::before{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  h1::after{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .back{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .modal_content{
+    width: 70%;
+  }
+
+  .media{
+    position: absolute;
+    top: 85px;
+    left: 20px;
+  }
+
+  .input1{
+    margin-left: 18%;
+    
+
+  }
+
+  .button1{
+    font-size: 18px;
+  }
+
+  .label1{
+    font-size: 25px;
+  }
+}
